@@ -6,8 +6,10 @@ app = FastAPI(
     version="1.0.0"
 )
 
-app.include_router(api_router)
-
 @app.get("/")
 def read_root():
     return {"status": "healthy", "platform": "Klade"}
+
+
+app.include_router(api_router)
+
